@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Command</key>
-	<string>curl --silent "http://weather.yahoo.com/germany/bavaria/munich-676757/?unit=c" | grep -e "forecast-icon" | sed "s/.*background\:url(\'\(.*\)\')\;\ _background.*/\1/" | xargs curl --silent -o /tmp/weather.png</string>
+	<string>curl --silent "http://weather.yahoo.com/germany/bavaria/munich-676757/?unit=c" | grep -e "class=\"current-weather\"" | sed "s/.*background\:url(\'\(.*\)\') no-repeat scroll 0% 0% transparent;.*/\1/" | xargs curl --silent -o /tmp/weather.png</string>
 	<key>DropShadow</key>
 	<false/>
 	<key>FailureImage</key>
